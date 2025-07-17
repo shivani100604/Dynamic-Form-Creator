@@ -1,0 +1,147 @@
+/* Base styles */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 2rem;
+}
+
+.dynamic-form {
+  max-width: 700px;
+  margin: auto;
+  padding: 2rem;
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 128, 0, 0.1);
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.dynamic-form h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1a8e36;
+  font-size: 1.7rem;
+}
+
+.form-field {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 2px solid #cfcfcf;
+  border-radius: 6px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #1a8e36;
+}
+
+/* Checkboxes */
+input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+/* File input */
+input[type="file"] {
+  padding: 0.4rem;
+  border: none;
+}
+
+/* Card / fieldset */
+.card {
+  border: 2px solid #1a8e36;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  background-color: #f9fff9;
+}
+
+.card legend {
+  font-weight: bold;
+  padding: 0 10px;
+  color: #1a8e36;
+}
+
+/* Buttons */
+button {
+  padding: 0.7rem 1.4rem;
+  background-color: #1a8e36;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #146d29;
+}
+
+button[type="button"] {
+  margin-top: 1rem;
+}
+
+/* Error messages */
+.error {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 0.4rem;
+}
+
+/* Submit button alignment */
+.dynamic-form > button[type="submit"] {
+  display: block;
+  margin: 1.5rem auto 0 auto;
+}
+
+/* Dark mode (optional) */
+body.dark-mode {
+  background-color: #121212;
+  color: #ddd;
+}
+
+body.dark-mode .dynamic-form {
+  background-color: #1e1e1e;
+  color: #ddd;
+  box-shadow: 0 0 20px rgba(0, 255, 100, 0.1);
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+  background-color: #2b2b2b;
+  color: #fff;
+  border-color: #444;
+}
+
+body.dark-mode .card {
+  background-color: #222;
+  border-color: #44dd44;
+}
+
+body.dark-mode label {
+  color: #ccc;
+}
+
+body.dark-mode .error {
+  color: #ff6666;
+}
