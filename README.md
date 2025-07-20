@@ -63,7 +63,7 @@ Make sure Node.js and npm are installed.
 
 ```bash
 git clone https://github.com/Shivani100604/Dynamic-Form-Creator.git
-cd dynamic-form-creator
+cd Dynamic-Form-Creator
 ```
 
 ### 2. Run the Client (React App)
