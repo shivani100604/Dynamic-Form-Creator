@@ -62,7 +62,7 @@ Make sure Node.js and npm are installed.
 ### 1. Clone or Download the Project
 
 ```bash
-git clone https://github.com/your-username/dynamic-form-creator.git
+git clone https://github.com/Shivani100604/Dynamic-Form-Creator.git
 cd dynamic-form-creator
 ```
 
