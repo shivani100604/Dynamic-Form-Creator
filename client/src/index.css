@@ -1,114 +1,84 @@
-.main-container {
-  display: flex;
-  gap: 40px;
-  padding: 50px;
-  background: #0a0a0c;
-  min-height: 100vh;
-  justify-content: center;
+.form-builder-container {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  height: 100vh;
+  background: #050505;
+  color: white;
+  padding: 20px;
+  gap: 20px;
 }
 
-.control-panel, .preview-panel {
-  background: #121214;
+/* Sidebar with Neon Glow */
+.glass-sidebar {
+  background: rgba(20, 20, 25, 0.8);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
   padding: 30px;
-  border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  width: 400px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.1);
 }
 
-h1, h2 {
-  background: linear-gradient(to right, #6366f1, #a855f7);
+.glow-text {
+  background: linear-gradient(90deg, #818cf8, #c084fc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 20px;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
 }
 
-.btn-group {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.btn-group button {
-  background: #1e1e24;
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 14px;
+.add-btn {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(129, 140, 248, 0.3);
+  color: #a5b4fc;
   border-radius: 12px;
   cursor: pointer;
-  transition: 0.3s;
-  text-align: left;
+  transition: 0.3s ease;
   font-weight: 600;
 }
 
-.btn-group button:hover {
+.add-btn:hover {
   background: #6366f1;
-  transform: translateX(10px);
+  color: white;
+  transform: translateX(8px);
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
 }
 
-.reset-btn {
-  margin-top: 30px;
+/* Form Cards Animation */
+.form-card {
+  background: #111113;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  border-left: 4px solid #6366f1;
+  animation: slideIn 0.4s ease forwards;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+input {
   width: 100%;
-  background: transparent;
-  border: 1px solid #ef4444;
-  color: #ef4444;
   padding: 12px;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-/* Form Styles */
-.form-group {
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.form-group label {
-  display: block;
-  color: #94a3b8;
-  margin-bottom: 8px;
-  font-size: 0.9rem;
-}
-
-.form-group input {
-  width: 100%;
-  background: #1a1a1e;
-  border: 1px solid #2d2d32;
-  padding: 12px;
-  border-radius: 10px;
+  background: #1a1a1c;
+  border: 1px solid #333;
+  border-radius: 8px;
   color: white;
-}
-
-.remove-btn {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: #ef4444;
-  border: none;
-  color: white;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 10px;
-}
-
-.submit-btn {
-  width: 100%;
-  background: linear-gradient(to right, #6366f1, #a855f7);
-  color: white;
-  border: none;
-  padding: 15px;
-  border-radius: 12px;
-  font-weight: bold;
-  cursor: pointer;
   margin-top: 10px;
 }
 
-#empty-state {
-  color: #4b5563;
-  text-align: center;
-  padding: 40px 0;
-  border: 2px dashed #2d2d32;
-  border-radius: 15px;
+.submit-form-btn {
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(168, 85, 247, 0.3);
 }
