@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Dynamic form creator</title>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form Creator | Shivani</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="control-panel">
+            <h1>Form Creator</h1>
+            <p>Select field type to add:</p>
+            <div class="btn-group">
+                <button onclick="addField('text')">+ Text Input</button>
+                <button onclick="addField('email')">+ Email Input</button>
+                <button onclick="addField('number')">+ Number Input</button>
+                <button onclick="addField('password')">+ Password</button>
+            </div>
+            <button class="reset-btn" onclick="resetForm()">Reset Form</button>
+        </div>
+
+        <div class="preview-panel">
+            <h2>Live Form Preview</h2>
+            <form id="dynamicForm">
+                <div id="empty-state">No fields added yet. Click buttons to start!</div>
+            </form>
+            <button id="submitBtn" style="display:none;" onclick="handleFormSubmit(event)">Submit Form Data</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
